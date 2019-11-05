@@ -24,7 +24,7 @@ class EntryEditorViewSet(viewsets.ModelViewSet):
         }.get(self.action, self.serializer_class)
 
     def perform_create(self, serializer):
-        extra_params = {'user': self.request.user, 'kernel_id': uuid.uuid4()}
+        extra_params = {'kernel_id': uuid.uuid4()}
         if 'cells' not in serializer.validated_data:
             extra_params['cells'] = [
                 {
