@@ -16,7 +16,8 @@ class EntryEditorViewSet(viewsets.ModelViewSet):
     search_fields = ('=id', 'name', 'word')
 
     def get_queryset(self):
-        return self.queryset.filter(is_public=True)
+        # return self.queryset.filter(is_public=True)
+        return self.queryset.all()
 
     def get_serializer_class(self):
         return {
