@@ -9,10 +9,10 @@ class EntryEditorSerializer(serializers.ModelSerializer):
     class Meta:
         model = EntryEditor
         fields = '__all__'
-        read_only_fields = ['user']
+        # read_only_fields = ['user']
 
 
 class EntryEditorListSerializer(serializers.ModelSerializer):
     class Meta:
         model = EntryEditor
-        fields = ['id', 'name', 'user', 'is_public', 'created_at', 'updated_at']
+        fields = ['id', 'name', 'is_public', 'created_at', 'updated_at']
